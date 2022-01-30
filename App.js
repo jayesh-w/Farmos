@@ -16,6 +16,7 @@ import LoginScreen from './Screen/LoginScreen';
 import RegisterFirstScreen from './Screen/RegisterFirstScreen';
 import RegisterScreen from './Screen/RegisterScreen';
 import DrawerNavigationRoutes from './Screen/DrawerNavigatorRoutes';
+import ProfileScreen from './Screen/ProfileScreen';
 const Stack = createStackNavigator();
 
 const Auth = () => {
@@ -81,6 +82,13 @@ const App = () => {
         <Stack.Screen
           name="DrawerNavigationRoutes"
           component={DrawerNavigationRoutes}
+          // Hiding header for Navigation Drawer
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
           // Hiding header for Navigation Drawer
           options={{headerShown: false}}
         />
